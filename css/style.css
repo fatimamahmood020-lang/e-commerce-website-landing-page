@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Navigation */
+.site-header {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+}
+
+/* Sable logo stays top-left */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Navigation centered at top */
+.nav-links {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 32px;
+}
+.nav-links a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-links a:hover {
+  color: #fff;
+}
+/* Hero Section */
+/* White bar top-right */
+.white-bar {
+  position: absolute;
+  top: 24px;
+  right: 48px;
+  width: 90px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  z-index: 11;
+}
+.hero-layer {
+  position: relative;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+.hero-line {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  color: #ffffff;
+}
+.hero-bold {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 16px 0 24px;
+  color: #ffffff;
+}
+
+/* Cyan Explore Button */
+.btn-explore {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #00ffff;
+  color: #000000;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.35);
+  transition: transform 160ms ease, filter 160ms ease;
+}
+.btn-explore:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+/* Cards */
+.card-top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px; /* figma width */
+  height: auto;
+}
+.card-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 270px; /* figma height approximation */
+  height: auto;
+}
+
+/* FDIC Icon */
+.fdic-corner {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100px;
+  opacity: 0.6;
+}
