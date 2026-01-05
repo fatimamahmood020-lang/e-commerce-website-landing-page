@@ -2,48 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sable Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />  <title>Sable | Financial Freedom</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation -->
+
   <header class="site-header">
-    <div class="nav-inner">
-      <div class="logo">Sable.</div>
-      <nav class="nav-links">
-        <a href="#">CREDIT</a>
-        <a href="#">DEBIT</a>
-        <a href="#">APP</a>
-        <a href="#">LEARN</a>
-      </nav>
-    
-</header>
+    <div class="logo">Sable.</div>
+    <nav class="nav-links">
+      <a href="#">CREDIT</a>     
+      <a href="#">DEBIT</a>
+      <a href="#">APP</a>
+      <a href="#">LEARN</a>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-layer">
-    <!-- White bar top-right -->
+    <div class="header-pill"></div>
+  </header>
+
+  <main class="hero">
     <div class="white-bar"></div>
-    <div class="hero-overlay">
-      <!-- Top card centered -->
-      <img src="assests/images/card-top.png" alt="Top Card" class="card-top" />
+    <div class="hero-content">
+      <h1 class="headline">
+        The fastest, most <br>
+        premium path to <br>
+        <span class="bold-text">financial freedom</span>
+      </h1>
+      <button class="btn-explore">EXPLORE</button>
+    </div>
 
-      <!-- Text block -->
-      <div class="hero-content">
-        <p class="hero-line">The fastest,</p>
-        <p class="hero-line">most premium path to</p>
-        <h1 class="hero-bold">financial freedom</h1>
-        <a href="#benefits" class="btn-explore">Explore</a>
+    <!-- FDIC Footer Area -->
+    <div class="fdic-container">
+      <img src="assests/icons/fdic-icon.png" alt="FDIC" class="fdic-logo">
+      <p class="fdic-text">
+        Banking services provided by Coastal Community Bank, Member FDIC, <br> 
+        pursuant to license by Mastercard International Inc.
+      </p>
+    </div>
+  </main>
+    <section class="features-section" id="features">
+  <div class="features-inner">
+    <div class="features-header">
+      <p class="accounts-count">400,000 ACCOUNTS & COUNTING</p>
+      <h2 class="features-heading">
+        No hidden fees. No credit checks.<br>
+        <span>No more barriers to building credit.</span>
+      </h2>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-col left">
+        <div class="feature-item">
+          <img src="assests/icons/debit-icon.png" class="icon">
+          <h3>Get a secured credit<br> card and bank account<br> in 5 minutes.</h3>
+          <p>No credit history, credit check, or <br> minimum deposit required.</p>
+        </div>
+        <div class="feature-item">
+          <img src="assests/icons/trophy-icon.png" class="icon">
+          <h3>The only premium card for<br>building credit.</h3>
+          <p>2% unlimited cash back on your<br> favorite brands, 2X first year cash<br> back match, premium benefits and<br> more!</p>
+        </div>
       </div>
 
-      <!-- Bottom card -->
-      <img src="assests/images/card-bottom.png" alt="Bottom Card" class="card-bottom" />
+      <div class="phone-wrapper">
+        <img src="assests/images/phone.png" class="phone-img">
+      </div>
 
-      <!-- FDIC icon -->
-      <img src="assests/icons/fdic-icon.png" alt="FDIC Icon" class="fdic-corner" />
+      <div class="feature-col right">
+        <div class="feature-item">
+            <img src="assests/icons/direct-icon.png" class="icon">
+          <h3>Build your U.S. Credit</h3>
+          <p>We believe in forming positive habits. <br>Build your U.S. credit with Sable</p>
+        </div>
+        <div class="feature-item">
+            <img src="assests/icons/global-icon.png" class="icon">
+          <h3>Bank like a global<br> citizen with Sable.</h3>
+          <p>Start building credit before you even<br>enter the country. U.S. citizens<br>can apply with their passport and<br> visa.</p>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <script src="js/main.js"></script>
+  </div>
+</section>
 </body>
 </html>
