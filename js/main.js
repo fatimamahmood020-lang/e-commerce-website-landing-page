@@ -43,3 +43,28 @@ if (featureSection) {
     }
   });
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const phone = document.querySelector('.phone-mockup-img');
+  const features = document.querySelectorAll('.feature-box');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  phone.style.opacity = '0';
+  phone.style.transform = 'translateY(20px)';
+  phone.style.transition = 'all 1s ease-out';
+  observer.observe(phone);
+
+  features.forEach(f => {
+    f.style.opacity = '0';
+    f.style.transform = 'translateY(20px)';
+    f.style.transition = 'all 0.8s ease-out';
+    observer.observe(f);
+  });
+});
