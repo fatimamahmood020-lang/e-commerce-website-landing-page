@@ -1,70 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Smooth scroll for Explore button
-  const exploreBtn = document.querySelector('.btn-explore');
-  if (exploreBtn && exploreBtn.getAttribute('href')?.startsWith('#')) {
-    exploreBtn.addEventListener('click', (e) => {
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* Mint buttons click */
+  const mintButtons = document.querySelectorAll(".mint-button");
+  mintButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      alert(button.innerText + " clicked");
+    });
+  });
+
+  /* Smooth scroll for links */
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
       e.preventDefault();
-      const targetId = exploreBtn.getAttribute('href');
-      const target = document.querySelector(targetId);
+      const target = document.querySelector(this.getAttribute("href"));
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        target.scrollIntoView({ behavior: "smooth" });
       }
     });
-  }
-
-  // Fade-in hero content
-  const heroContent = document.querySelector('.hero-content');
-  
-  if (heroContent) {
-    heroContent.style.opacity = '0';
-    heroContent.style.transform = 'translateY(12px)';
-    
-    requestAnimationFrame(() => {
-      heroContent.style.transition = 'opacity 800ms ease, transform 800ms ease';
-      heroContent.style.opacity = '1';
-      heroContent.style.transform = 'translateY(0)';
-    });
-  }
-});
-// Fade-in second section on scroll
-const featureSection = document.querySelector('.features-section');
-
-if (featureSection) {
-  featureSection.style.opacity = '0';
-  featureSection.style.transform = 'translateY(40px)';
-
-  window.addEventListener('scroll', () => {
-    const rect = featureSection.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 150) {
-      featureSection.style.transition =
-        'opacity 900ms ease, transform 900ms ease';
-      featureSection.style.opacity = '1';
-      featureSection.style.transform = 'translateY(0)';
-    }
   });
-}
-document.addEventListener('DOMContentLoaded', () => {
-  const phone = document.querySelector('.phone-mockup-img');
-  const features = document.querySelectorAll('.feature-box');
 
-  const observer = new IntersectionObserver((entries) => {
+  /* Simple fade-in on scroll */
+  const sections = document.querySelectorAll("section");
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
       }
     });
   }, { threshold: 0.1 });
 
-  phone.style.opacity = '0';
-  phone.style.transform = 'translateY(20px)';
-  phone.style.transition = 'all 1s ease-out';
-  observer.observe(phone);
-
-  features.forEach(f => {
-    f.style.opacity = '0';
-    f.style.transform = 'translateY(20px)';
-    f.style.transition = 'all 0.8s ease-out';
-    observer.observe(f);
+  sections.forEach(section => {
+    section.style.opacity = "0";
+    section.style.transform = "translateY(40px)";
+    section.style.transition = "all 0.6s ease";
+    observer.observe(section);
   });
+
 });
